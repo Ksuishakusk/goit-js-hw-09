@@ -7,7 +7,7 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ebecf0;
+  background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
 }
@@ -17,45 +17,55 @@ img {
   max-width: 100%;
 }
 
-ul {
-  list-style: none;
+#datetime-picker {
+  text-align: center;
+  border: solid #000 3px;
+  border-radius: 10px;
+  padding: 20px 0;
+  margin-right: 40px;
+  font-size: 1.5em;
 }
 
-li.main-item {
-  margin-bottom: 20px;
+button[data-start] {
+  padding: 15px 25px;
+  border: solid rgb(131, 133, 8) 3px;
+  border-radius: 10px;
+  background-color: rgb(255, 251, 0);
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.main-link {
-  /* 
-  color: #61677c;
-  font-weight: 600;
-  font: inherit; */
-  text-decoration: none;
+button[data-stop] {
+  padding: 15px 25px;
+  border: solid rgb(131, 133, 8) 3px;
+  border-radius: 10px;
+  background-color: rgb(255, 0, 0);
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
-  max-width: 150px;
-  padding: 8px 12px;
+.timer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  background-color: rgb(0, 76, 240);
+}
 
-  border: 0;
-  outline: 0;
-  border-radius: 320px;
-
-  background-color: #ebecf0;
-  text-shadow: 1px 1px 0 #fff;
-
-  font-size: 16px;
-  font: inherit;
+.field {
   font-weight: bold;
-
-  color: #61677c;
-  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
 }
 
-.main-link:hover {
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+.field .value {
+  font-size: 3em;
+  color: #f6fa00;
 }
 
-.main-link:active {
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+.field .label {
+  color: #00c0e2;
+}
+
+.field:not(:last-child) {
+  margin-right: 40px;
 }
